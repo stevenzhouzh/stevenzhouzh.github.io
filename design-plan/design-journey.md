@@ -53,10 +53,10 @@ This includes future researchers looking for collaboration, future HRs assessing
 
 - A dropdown menu for  "Projects" and "Experiences" on the main/top navigation bar.
   - I thought this would enhances experiences to provide more speedy and efficient navigation to the needed content for my audience, who are likely to value their time greatly with tense academic works. Users could get to their desired content with just one click from the Home page, without the need of even scrolling.
-- Use a carousel for the card-like content in "Skills" section in "Experiences" page
+- Use a carousel for the card-like content in "Skills" section in "Experiences" page, or for the content in "Who am I?" "Skills" section in Home page.
   - I thought this would utilise the space more efficiently. Currently, the information occupies two rows with different widths. Organizing them in a single row, but with carousel, would enhance the functionality for my audience as it provides more visual uniformity and therefore allows quicker identification of key information and navigation. This is true as not all of my audience are interested in the same skill that I have
-- Use a carousel for the card-like content in "Who am I?" "Skills" section in Home page.
-  - This idea is with similar reason as the previous one. Not all of my audience are interested in the same skill or position that I have. using a carousel would make efficient use of spaces and facilitates navigation.
+- Use a accordian to organize information under the "Work Experience" section in the "Experiences" page.
+  - I thought using accordian would make more efficient use of space. It allows my audience, which might be in interest in slightly different experieces, to quickly get to their desired information withou needing to read/scroll past the other irrelevant info. They will just open the one they are interested in once they read the title.
 - Modal to display larger images for each of the figures and graphs inside the projects pages
   - This is to allow my audience, who are in academic fields, to look up closely at the images that contains information integral to the project/article. These academic audience would likely want to know about the details of graphs, maps, charts, etc. A modal would facilitate this without the images occupying too much space on the page.
 
@@ -66,7 +66,7 @@ This includes future researchers looking for collaboration, future HRs assessing
 > Sketch several iterations of your interactivity.
 > Annotate each sketch explaining what happens when a user takes an action. (e.g. When user clicks this, something else appears.)
 
-TODO: idea sketches
+#### Sketches for dropdown menu
 
 
 ### Final Interactivity Design (Milestone 1)
