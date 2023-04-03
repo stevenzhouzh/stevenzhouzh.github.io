@@ -51,9 +51,14 @@ This includes future researchers looking for collaboration, future HRs assessing
 > Briefly explain each idea and provide a brief rationale for how the interactivity enhances the site's functionality for the audience.
 > Note: You may find it easier to sketch for brainstorming. That's fine too. Do whatever you need to do to explore your ideas.
 
-- TODO: idea 1
-- TODO: idea 2
-- TODO: ...
+- A dropdown menu for  "Projects" and "Experiences" on the main/top navigation bar.
+  - I thought this would enhances experiences to provide more speedy and efficient navigation to the needed content for my audience, who are likely to value their time greatly with tense academic works. Users could get to their desired content with just one click from the Home page, without the need of even scrolling.
+- Use a carousel for the card-like content in "Skills" section in "Experiences" page
+  - I thought this would utilise the space more efficiently. Currently, the information occupies two rows with different widths. Organizing them in a single row, but with carousel, would enhance the functionality for my audience as it provides more visual uniformity and therefore allows quicker identification of key information and navigation. This is true as not all of my audience are interested in the same skill that I have
+- Use a carousel for the card-like content in "Who am I?" "Skills" section in Home page.
+  - This idea is with similar reason as the previous one. Not all of my audience are interested in the same skill or position that I have. using a carousel would make efficient use of spaces and facilitates navigation.
+- Modal to display larger images for each of the figures and graphs inside the projects pages
+  - This is to allow my audience, who are in academic fields, to look up closely at the images that contains information integral to the project/article. These academic audience would likely want to know about the details of graphs, maps, charts, etc. A modal would facilitate this without the images occupying too much space on the page.
 
 
 ### Interactivity Design Ideation (Milestone 1)
