@@ -18,14 +18,16 @@ Be clear and concise in your writing. Bullets points are encouraged.
 ### Project (Milestone 1)
 > Which project will you add interactivity to enhance the site's functionality?
 
-Project (TODO: 1 or 2)
+Project 1
 
 
 ### Audience (Milestone 1)
 > Briefly explain your site's audience.
 > Be specific and justify why this audience is a **cohesive** group.
 
-TODO: site's _cohesive_ audience
+Researchers, academics and students who are interested in the fields of urban studies, data science and sustainability.
+
+This includes future researchers looking for collaboration, future HRs assessing my experiences, and students who have similar interests and want to learn more about my experience.
 
 
 ### Audience's Goals (Milestone 1)
@@ -33,9 +35,13 @@ TODO: site's _cohesive_ audience
 > Simply list each goal. No need to include the "Design Ideas and Choices", etc.
 > You may adjust the goals if necessary.
 
-- TODO: goal 1
-- TODO: goal 2
-- TODO: ...
+1. Learn about my past and ongoing projects to evaluate whether or not to collaborate or connect
+
+2. Find ways to contact me or follow me for collaboration, invitation or networking
+
+3. Retrieve my resume and learn about my past academic or career experiences to evaluate whether or not to invite me to events, hire me as an intern
+
+4. Learn about my past experiences and projects to gather research ideas
 
 
 ## Interactivity Design (Milestone 1)
