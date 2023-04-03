@@ -67,6 +67,35 @@ This includes future researchers looking for collaboration, future HRs assessing
 > Annotate each sketch explaining what happens when a user takes an action. (e.g. When user clicks this, something else appears.)
 
 #### Sketches for dropdown menu
+Iteration 1:
+![Iteration 1 of sketch of dropdown menu interactive feature design](dropdown_it1.jpeg)
+
+Iteration 2:
+![Iteration 2 of sketch of dropdown menu interactive feature design](dropdown_it2.jpeg)
+
+Iteration 3:
+![Iteration 3 of sketch of dropdown menu interactive feature design](dropdown_it3.jpeg)
+
+#### Sketches for carousel
+Iteration 1:
+![Iteration 1 of sketch of card-like content carousel interactive feature design](carousel_it1.jpeg)
+
+Iteration 2:
+![Iteration 2 of sketch of card-like content carousel interactive feature design](carousel_it2.jpeg)
+
+#### Sketches for accordian
+Iteration 1:
+![Iteration 1 of sketch of work experience accordian interactive feature design](accordian_it1.jpeg)
+
+Iteration 2:
+![Iteration 2 of sketch of work experience accordian interactive feature design](accordian_it2.jpeg)
+
+#### Sketches for modals
+Iteration 1:
+![Iteration 1 of sketch of project figure enlarging modal feature design](modal_it1.jpeg)
+
+Iteration 2:
+![Iteration 2 of sketch of project figure enlarging modal feature design](modal_it2.jpeg)
 
 
 ### Final Interactivity Design (Milestone 1)
