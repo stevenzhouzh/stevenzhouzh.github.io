@@ -211,7 +211,7 @@ When clicked #img_div_close:
 > In your own words, concisely explain why you believe your interactivity meets the "ambitious" requirement.
 > This should be a few sentences. (1-3 sentences)
 
-TODO: ambitious justification
+My interactivity meets the "ambitious" requirement as it contains 3 distinctive types of features. From ones that expands from a single piece (dropdown menu) to one that adds functionality to a section (accordian) to one that occupies the entire page (modal). These range of features assists navigation and information retrieval.
 
 
 ## Grading (Final Submission)
