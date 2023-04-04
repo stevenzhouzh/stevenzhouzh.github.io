@@ -105,8 +105,25 @@ Iteration 2:
 > Add annotations to explain what happens when the user takes an action.
 > Include as many sketches as necessary to communicate your design (ask yourself, could another 1300 take these sketches an implement my design?)
 
-TODO: final sketch(es)
+I have decided to adopt the iteration 1 of dropdown menu. This is because it is the most commonly seen design pattern and is the most intuitive. The final sketch:
 
+![Final design sketch of dropdown menu design (Overview)](dropdown_overview_final.jpg)
+
+![Final design sketch of dropdown menu design (Enlarged)](dropdown_enlarged_final.jpg)
+
+I have decided to not use the carousel. This is because I have re-evaluated and thought that the amount of card-like content is not to the level that need a carousel.
+
+I have decided to use iteration 1 of the accordian. The final sketch:
+
+![Final design sketch of accordian design (Overview)](accordian_overview_final.jpg)
+
+![Final design sketch of accordian design (Enlarged)](accordian_enlarged_final.jpg)
+
+I have decided to use iteration 1 of the modal, but made some slight changes in terms of adding a "enlarge" button below the thumnail. In this way, I thought it gives more clue to the user on what action they can perform. The final sketch:
+
+![Final design sketch of modal design (Overview)](modal_overview_final.jpg)
+
+![Final design sketch of modal design (Enlarged)](modal_enlarged_final.jpg)
 
 ### Interactivity Rationale (Milestone 1)
 > Describe the purpose of your proposed interactivity.
