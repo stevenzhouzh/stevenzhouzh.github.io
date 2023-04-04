@@ -130,7 +130,13 @@ I have decided to use iteration 1 of the modal, but made some slight changes in 
 > Provide a brief rationale explaining how your proposed interactivity addresses the goals of your site's audience.
 > This should be about a paragraph. (3-5 sentences)
 
-TODO: design rationale
+The interactive features would help facilitate the audience to achive their goals by being functional. The designed dropdown menu allows more efficient, one step navigation for users to get to their desired content. It facilitates goal 1 and 4 of my audiences. The accoridna provides clearer intra-page filtering - allowing audience to achieve goal 4 quicker - as they can expand the content that they want only without the need to read the details of the rest. The modal allows audiences that want to learn more about my projects (goal 1) to expand and view the images/graphs/maps they want to see, without the content being too large and occupies unnessesary space on the main page.
+
+The features also satisfies the "Affordances" quality. They give clues on what action they provide. The accordian have a hroizontal triangular arrow - a common way of suggesting that it is expandable. Similarly, the modal have a "Enlarge" button, which intuitively make sense that it can expand the image. The "X" on the button at the top of the modal also clearly suggests that it is for closing the window.
+
+Each action also have visual feedback, with the dropdown showing a expanded menu under the existing top navigation, the modal showing a overlayed box with an image and its description. The accordance will expand and display the details once a user clicks.
+
+All these design employs familiar design patterns. The accordances with each heading separated by lines and have an arrow that rotates is seen in many websites. Similar modal and dropdown designs are also widely employed in many modern websites.
 
 
 ## Interactivity Implementation Plan (Milestone 1)
