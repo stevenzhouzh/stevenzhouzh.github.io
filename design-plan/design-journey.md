@@ -144,7 +144,23 @@ All these design employs familiar design patterns. The accordances with each hea
 ### Interactivity Planning Sketches (Milestone 1)
 > Produce planning sketches that include all the details another 1300 student would need to implement your interactivity design.
 
-TODO: planning sketches
+#### Sketch for dropdown menu at top navigation bar
+
+![Planning sketch for dropdown menu (Overview)](dropdown_plan_overview.jpg)
+
+![Planning sketch for dropdown menu (Enlarged)](dropdown_plan_enlarged.jpg)
+
+#### Sketch for accordian in experiences page
+
+![Planning sketch for accordian (Overview)](accordian_plan_overview.jpg)
+
+![Planning sketch for accordian (Enlarged)](accordian_plan_enlarged.jpg)
+
+#### Sketch for modal in projects page
+
+![Planning sketch for modal (Overview)](modal_plan_overview.jpg)
+
+![Planning sketch for modal (Enlarged)](modal_plan_enlarged.jpg)
 
 
 ### Interactivity Pseudocode Plan (Milestone 1)
