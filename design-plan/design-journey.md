@@ -167,8 +167,43 @@ All these design employs familiar design patterns. The accordances with each hea
 > Write your interactivity pseudocode plan here.
 > Pseudocode is not JavaScript. Please do not put JavaScript code here.
 
+#### Pseudocode Plan for dropdown menu at top navigation bar
+
 ```
-TODO: pseudocode
+When hovering #nav_projects:
+    Remove .hidden from #nav_dd_projects
+
+When not hovering #nav_projects or #nav_dd_projects
+    Add .hidden to #nav_dd_projects
+```
+
+#### Pseudocode Plan for accordian in experiences page
+
+```
+When clicked #work_rna:
+    Remove .hidden from #work_e_p
+    Add .hidden to #work_rna_p
+    Add .hidden to #work_u_p
+    Add .hidden to #work_a_p
+    Add .hidden to #work_c_p
+    Add .hidden to #work_p_p
+
+When clicked #work_rna again:
+    Add .hidden to #work_e_p
+```
+
+#### Pseudocode Plan for modal in projects page
+
+```
+When clicked #img_2_3_bu:
+    Remove .hidden from #img_div_close
+    Remove .hidden from #img_div
+    Remove .hidden from #img_2_3_large
+
+When clicked #img_div_close:
+    Add .hidden from #img_div_close
+    Add .hidden from #img_div
+    Add .hidden from #img_2_3_large
 ```
 
 
