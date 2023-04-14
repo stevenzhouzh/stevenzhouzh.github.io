@@ -117,11 +117,30 @@ th, td {
     color: #ffffff;
 }
 
-.overall_header nav ul li {
+.overall_header nav > ul li {
     display: inline;
     flex-grow: 3;
     font-size: 1.2em;
     margin: 0 0.5em;
+    position: relative;
+}
+
+.overall_header nav > ul li > ul {
+    position: absolute;
+    top: 2em;
+    left: -0.5em;
+    right: -4em;
+    background-color: #494949;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.overall_header nav > ul li > ul li {
+    display: block;
+    font-size: 1em;
 }
 
 .overall_header img {
@@ -340,4 +359,8 @@ footer {
 footer p,
 footer a {
     color: #ffffff;
+}
+
+.hidden {
+    display: none !important;
 }
