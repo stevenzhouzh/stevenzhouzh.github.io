@@ -150,6 +150,10 @@ All these design employs familiar design patterns. The accordances with each hea
 
 ![Planning sketch for dropdown menu (Enlarged)](dropdown_plan_enlarged.jpg)
 
+Update: I have later changed the plan slightly in terms of which element to apply .hidden to. I also added the feature of the element have its background color lightens when hovered.
+
+![Update of planning sketch for dropdown menu (Enlarged)](dropdown_plan_enlarged_update.jpg)
+
 #### Sketch for accordian in experiences page
 
 ![Planning sketch for accordian (Overview)](accordian_plan_overview.jpg)
@@ -175,6 +179,17 @@ When hovering #nav_projects:
 
 When not hovering #nav_projects or #nav_dd_projects
     Add .hidden to #nav_dd_projects
+```
+
+Updated version:
+```
+When hovering #nav_projects:
+    Remove .hidden from #nav_dd_projects
+    Add .lighten class to #nav_projects
+
+When not hovering #nav_projects or #nav_dd_projects
+    Add .hidden to #nav_dd_projects
+    Remove .lighten class from #nav_projects
 ```
 
 #### Pseudocode Plan for accordian in experiences page
