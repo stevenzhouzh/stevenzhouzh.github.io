@@ -170,6 +170,11 @@ Update: I have later changed the plan in terms of how exactly to implement. Spec
 
 ![Planning sketch for modal (Enlarged)](modal_plan_enlarged.jpg)
 
+Update: I later redesigned the modal. I added classes .modal to wrap the entire modal with its background, .modal_body and .modal_header. I also added .modal_open and .modal_close classes to the "Enlarge" and "Close" button. Again, these are for better apply of .hidden universally. I also changed the name of some ids and classes. I also decided to add a heading for the modal "Enlarged Figure" although it is not shown in this sketch.
+
+![Update of planning sketch for modal (Overview)](modal_plan_overview_updated.jpg)
+
+![Update of planning sketch for modal (Enlarged)](modal_plan_enlarged_updated.jpg)
 
 ### Interactivity Pseudocode Plan (Milestone 1)
 > Write your interactivity pseudocode plan here.
@@ -318,17 +323,29 @@ When clicked #work_p_b:
 
 ```
 When clicked #img_2_3_bu:
-    Remove .hidden from #img_div_close
-    Remove .hidden from #img_div
-    Remove .hidden from #img_2_3_large
+  Remove .hidden from #img_div_close
+  Remove .hidden from #img_div
+  Remove .hidden from #img_2_3_large
 
 When clicked #img_div_close:
-    Add .hidden from #img_div_close
-    Add .hidden from #img_div
-    Add .hidden from #img_2_3_large
+  Add .hidden from #img_div_close
+  Add .hidden from #img_div
+  Add .hidden from #img_2_3_large
 ```
 
 Note: this only shows the code for one of the images, but the same applies to all other.
+
+Updated:
+
+```
+When clicked #p1_fig2-4_button:
+  Add .hidden to .modal_image
+  Remove .hidden from .modal
+  Remove .hidden from #p1_fig2-4_large
+
+When clicked .modal_close:
+  Add .hidden to .modal
+```
 
 
 ### "Ambitious" Interactivity Explanation (Milestone 1)
