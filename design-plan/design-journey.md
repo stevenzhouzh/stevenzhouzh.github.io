@@ -160,6 +160,10 @@ Update: I have later changed the plan slightly in terms of which element to appl
 
 ![Planning sketch for accordian (Enlarged)](accordian_plan_enlarged.jpg)
 
+Update: I have later changed the plan in terms of how exactly to implement. Specifically, I decided to use classes that wraps around all buttons and the body of the accordian, so it is easier to apply .hidden to all of them.
+
+![Update of planning sketch for accordian (Enlarged)t](accordian_plan_enlarged_updated.jpg)
+
 #### Sketch for modal in projects page
 
 ![Planning sketch for modal (Overview)](modal_plan_overview.jpg)
@@ -175,36 +179,139 @@ Update: I have later changed the plan slightly in terms of which element to appl
 
 ```
 When hovering #nav_projects:
-    Remove .hidden from #nav_dd_projects
+  Remove .hidden from #nav_dd_projects
 
 When not hovering #nav_projects or #nav_dd_projects
-    Add .hidden to #nav_dd_projects
+  Add .hidden to #nav_dd_projects
 ```
 
 Updated version:
+
 ```
 When hovering #nav_projects:
-    Remove .hidden from #nav_dd_projects
-    Add .lighten class to #nav_projects
+  Remove .hidden from #nav_dd_projects
+  Add .lighten class to #nav_projects
 
 When not hovering #nav_projects or #nav_dd_projects
-    Add .hidden to #nav_dd_projects
-    Remove .lighten class from #nav_projects
+  Add .hidden to #nav_dd_projects
+  Remove .lighten class from #nav_projects
+
+When hovering #nav_experiences:
+  Remove .hidden from #nav_dd_experiences
+  Add .lighten class to #nav_experiences
+
+When not hovering #nav_projects or #nav_dd_experiences
+  Add .hidden to #nav_dd_experiences
+  Remove .lighten class from #nav_experiences
 ```
 
 #### Pseudocode Plan for accordian in experiences page
 
 ```
 When clicked #work_rna:
-    Remove .hidden from #work_e_p
-    Add .hidden to #work_rna_p
-    Add .hidden to #work_u_p
-    Add .hidden to #work_a_p
-    Add .hidden to #work_c_p
-    Add .hidden to #work_p_p
+  Remove .hidden from #work_e_p
+  Add .hidden to #work_rna_p
+  Add .hidden to #work_u_p
+  Add .hidden to #work_a_p
+  Add .hidden to #work_c_p
+  Add .hidden to #work_p_p
 
 When clicked #work_rna again:
-    Add .hidden to #work_e_p
+  Add .hidden to #work_e_p
+```
+
+Updated version:
+
+```
+When clicked #work_rna_b:
+  If #work_rna_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_rna_b > .dropdown_arrow
+    Remove .hidden from #work_rna_p
+    Removd .hidden from #work_rna_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_rna_b .dropdown_arrow
+
+When clicked #work_u_b:
+  If #work_u_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_u_b > .dropdown_arrow
+    Remove .hidden from #work_u_p
+    Removd .hidden from #work_u_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_u_b .dropdown_arrow
+
+When clicked #work_e_b:
+  If #work_e_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_e_b > .dropdown_arrow
+    Remove .hidden from #work_e_p
+    Removd .hidden from #work_e_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_e_b .dropdown_arrow
+
+When clicked #work_a_b:
+  If #work_a_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_a_b > .dropdown_arrow
+    Remove .hidden from #work_a_p
+    Removd .hidden from #work_a_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_a_b .dropdown_arrow
+
+When clicked #work_c_b:
+  If #work_c_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_c_b > .dropdown_arrow
+    Remove .hidden from #work_c_p
+    Removd .hidden from #work_c_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_c_b .dropdown_arrow
+
+When clicked #work_p_b:
+  If #work_p_p have .hidden:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from .dropdown_arrow
+
+    Add .hidden to #work_p_b > .dropdown_arrow
+    Remove .hidden from #work_p_p
+    Removd .hidden from #work_p_b > .dropdown_arrow_expanded
+
+  Otherwise:
+    Add .hidden to .accordian_body
+    Add .hidden to .dropdown_arrow_expanded
+    Remove .hidden from #work_p_b .dropdown_arrow
 ```
 
 #### Pseudocode Plan for modal in projects page
@@ -220,6 +327,8 @@ When clicked #img_div_close:
     Add .hidden from #img_div
     Add .hidden from #img_2_3_large
 ```
+
+Note: this only shows the code for one of the images, but the same applies to all other.
 
 
 ### "Ambitious" Interactivity Explanation (Milestone 1)
