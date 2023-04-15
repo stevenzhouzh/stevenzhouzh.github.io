@@ -375,3 +375,31 @@ footer a {
 .hidden {
     display: none !important;
 }
+
+.accordian_button {
+    display: inline-block;
+    border: none;
+    width: 100%;
+    padding: 1em;
+    font-size: 0.85em;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: left;
+    border-top: #000000 solid 0.1em;
+}
+
+.accordian_button:hover {
+    background-color: #838383;
+    color: #fbfbfb;
+    border-top: #000000 solid 0.1em;
+}
+
+.accordian_item {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown_arrow, .dropdown_arrow_expanded {
+    width: 1.5%;
+}
