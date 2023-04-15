@@ -20,8 +20,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a>
-                    <ul class="hidden">
+                <li id="nav_projects">
+                    <a href="projects.html">Projects</a>
+                    <ul class="hidden" id="nav_dd_projects">
                         <li><a href="projects.html#proj_1">Transit</a></li>
                         <li><a href="projects.html#proj_2">SUDS</a></li>
                         <li><a href="projects.html#proj_3">Housing Prices</a></li>
@@ -29,13 +30,13 @@
                         <li><a href="projects.html#proj_5">Health Equity</a></li>
                     </ul>
                 </li>
-                <li><a href="experience.html">Experiences</a>
-                    <ul class="hidden">
+                <li id="nav_experiences"><a href="experience.html">Experiences</a>
+                    <ul class="hidden" id="nav_dd_experiences">
                         <li><a href="experience.html#biography">Biography</a></li>
                         <li><a href="experience.html#skills">Skills</a></li>
-                        <li><a href="experience.html#education">Education experience</a></li>
-                        <li><a href="experience.html#work">Work experience</a></li>
-                        <li><a href="experience.html#events">Events/Conferences</a></li>
+                        <li><a href="experience.html#education">Education</a></li>
+                        <li><a href="experience.html#work">Work</a></li>
+                        <li><a href="experience.html#events">Events</a></li>
                     </ul>
                 </li>
                 <li><a href="contacts.html">Contact Me</a></li>
@@ -479,11 +480,13 @@
         </main>
     </div>
 
-<footer>
-    <p>© Copyright, Steven Zhou. All rights reserved.</p>
-    <p>Contact <a href="mailto:stevenzhouzihao@outlook.com">stevenzhouzihao@outlook.com</a> for copyright related questions.</p>
-</footer>
+    <footer>
+        <p>© Copyright, Steven Zhou. All rights reserved.</p>
+        <p>Contact <a href="mailto:stevenzhouzihao@outlook.com">stevenzhouzihao@outlook.com</a> for copyright related questions.</p>
+    </footer>
 
+    <script src="scripts/jquery-3.6.1.js"></script>
+    <script src="scripts/main_dropdown.js"></script>
 </body>
 
 </html>
