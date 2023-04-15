@@ -73,411 +73,598 @@
             </div>
         </aside>
 
-        <main>
-            <div class="in_project_header">
-                <hgroup class="h1_group">
-                    <h1>Transit Accessibility and Deprivation</h1>
-                    <p>Exploring Spatiotemporal Heterogeneity and Association</p>
-                </hgroup>
+        <div class="modal_wrap">
+            <div class="modal hidden">
+                <div class="modal_item">
+                    <div class="modal_header">
+                        <p>Enlarged figure</p>
 
-                <dl>
-                    <dt>Author</dt>
-                    <dd>Zihao Zhou</dd>
+                        <button class="modal_close">
+                            Close
+                        </button>
+                    </div>
 
-                    <dt>Date</dt>
-                    <dd>Ongoing</dd>
-                </dl>
+                    <div class="modal_body">
+                        <div class="modal_image_wrap">
+                            <figure class="modal_image" id="p1_fig2-1_large">
+                                <img src="images/p1_fig2-1.png" alt="Graphical Representation of the Conceptual Framework of the project's methodology">
+                                <figcaption>Figure 2.1: Conceptual Framework</figcaption>
+                            </figure>
 
-                <p><strong>Note: the content presented here are preliminary and are subject to change</strong>. This text is a shortened version of the actual research paper.</p>
-            </div>
-
-            <div class="in_project_main">
-                <section>
-                    <h2 id="abstract">Abstract</h2>
-                    <p>Following the "transport's economization", public transportation was rapidly constructed and reconstructed to (at least aimed to) simultaneously achieve economic, social, and environmental goals. However, even with a massive volume of literature around accessibility, the actual relationship between public transport accessibility and socioeconomic status has hitherto received scant attention from scholars. This study thus addresses this gap using a GIS-based quantitative approach. Transit accessibility with varied characterization approaches (including gravity method, cumulative opportunities method and spatial separation method) was calculated from various sources (including transit network, timetable road network, POIs and other socioeconomic data), using ArcGIS network analyst. In the analysis stage, this project first explored the spatial heterogeneity of urban deprivation and public transport accessibility using methods such as Global Moran's I, Getis-Ord Gi*, and Anselin Local Moran's I. Spatial patterns and autocorrelation is identified. Then, this study carried out a correlational analysis to explore the spatiotemporal relationship between deprivation and accessibility. Lastly, the factors which contribute to this relationship were briefly discussed.</p>
-                </section>
-
-                <section>
-                    <h2 id="methodology">Methodology</h2>
-
-                    <section>
-                        <h3>Conceptual Framework</h3>
-                        <p>The transportation network data will be first pre-processed, followed by construction of a multilayered network dataset, combing a range of different modes including buses routes, underground and overground railway lines, light rail lines, and walking. After establishing the network dataset, an origin-destination (O-D) cost matrix will be produced.</p>
-                        <p>After producing the O-D cost matrix, this study will calculate the spatial integral public transit accessibility with both the spatial separation and gravity method.</p>
-                        <p>The data analysis of this study includes (1) spatial analysis of the heterogeneity and autocorrelation of urban depri- vation and transit accessibility (2) correlational analyses to evaluate the correlation between urban deprivation and transit accessibility.</p>
-
-                        <!-- Source: (original work) Steven Zhou-->
-                        <figure>
-                            <img src="images/p1_fig2-1.png" alt="Graphical Representation of the Conceptual Framework of the project's methodology" class="graph">
-                            <figcaption>Figure 2.1: Conceptual Framework</figcaption>
-                        </figure>
-                    </section>
-
-                    <section>
-                        <h3>Data Sources</h3>
-
-                        <section>
-                            <h4>Transportation Network Data</h4>
-                            <ul>
-                                <li>Road network in polyline vector format from Open Street map (OSM)</li>
-                                <li>Public Transit (PT) network and timetables in GTFS format from Traveline</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h4>Socioeconomic Data</h4>
-                            <ul>
-                                <li>Deprivation measure from UK Ministry of Housing, Communities and Local Gov.</li>
-                                <li>Commuting flows OD data from the census bureau</li>
-                            </ul>
-
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig2-4.jpg" alt="Map of London showing the commuting flows between LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig2-4_large">
+                                <img src="images/p1_fig2-4.jpg" alt="Map of London showing the commuting flows between LSOAs">
                                 <figcaption>Figure 2.4: Commuting flows OD data</figcaption>
                             </figure>
-                        </section>
-
-                    </section>
-
-                    <section>
-                        <h3>Analysis of Spatial Heterogenity</h3>
-                        <p>Global spatial autocorrelation will be accessed using the Global Moran's I and the Getic-Ord General G statistic. Local spatial autocorrelation will be assessed using An-selin Local Moran's I and Getis-Ord Gi* statistic.</p>
-
-                        <section>
-                            <h4>Global spatial autocorrelation analysis</h4>
-                            <p>Firstly, the precense of global spatial autocorrelation will be detercted using the Global Moran's I statistic. The Global Moran's I Statistic is defined as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for1.png" alt="Formula of The Global Moran's I Statistic" class="formula">
-                            <p>Where n is the total number of spatial units, wi,j(d) is the spatial weight between i and j, defined by a spatial weight matrix, a symmetric Boolean matrix. zi is the devi- ation of the attribute value of a feature i from the global mean of that attribute.</p>
-                            <p>If the z-score is positive, then a positive spatial autocor- relation is foundm, and vice versa.</p>
-                            <p>If a statistically significant global spatial autocorrelation is found, the Getis-Ord General G statistic can then be used to evaluate the characteristic of the autocorrelation, identifying whether it is the low or high values. Getis-Ord General G statistic is defined as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for2.png" alt="Formula of the Getis-Ord General G statistic" class="formula">
-                            <p>Where xi is the attribute value of a feature i.</p>
-                        </section>
-
-                        <section>
-                            <h4>Local spatial autocorrelation analysis</h4>
-                            <p>The Local Moran's I statistic, which was decomposed from the Global Moran's I statistic to the local level by Luc Anselin, can be used to identify hotspots and spatial outliers. The I statistic is defined as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for3.png" alt="Formula of the Local Moran's I statistic" class="formula">
-                            <p>Where Si2 is the sample variance.</p>
-                            <p>Here, a positive I indicates that the is part of a cluster, while negative I indicates that it is part of a outlier. The Getis-Ord Gi* statistic, which is also called Getis-Ord local G statistic, is defined as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for4.png" alt="Formula of the Getis-Ord Gi* statistic" class="formula">
-                            <p>The larger the positive G, the more intense the hotspot (high values are more clustered). If G is negative, then the smaller the score, the more intense the coldspot.</p>
-                        </section>
-
-                    </section>
-
-                    <section>
-                        <h3>Characterizing Deprivation</h3>
-                        <p>This study will measure depriva- tion using the English Indices of Deprivation (IoD), a set of indices developed by the UK Ministry of Housing, Communities and Local Government.</p>
-                        <p>The IoD includes not only economic deprivation, but includes a variety of different categories of deprivation (See Figure 2.6).</p>
-                        <!-- Source: (original work) Steven Zhou-->
-                        <figure>
-                            <img src="images/p1_fig2-6.png" alt="A chart showing the catergories of deprivation" class="graph">
-                            <figcaption>Figure 2.6: Categories of deprivation used in IoD</figcaption>
-                        </figure>
-                    </section>
-
-                    <section>
-                        <h3>Characterizing Accessibility</h3>
-                        <p>This study thus uses a multi-model approach for measuring accessibility - calculates both spatial separation and gravity-based accessibility.</p>
-
-                        <section>
-                            <h4>Spatial separation method</h4>
-                            <p>The spatial separational accessibility for each Lower Super Output Areas (LSOAs) is defined as the average spatial separation to centroids of all other LSOAs. Thus, the spatial separational method accessibility in this study can be mathematically defined as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for5.png" alt="Formula of the spatial separational method accessibility" class="formula">
-                            <p>Where n is the number of LSOAs, Tij is the spatial separation from i to j.</p>
-                        </section>
-
-                        <section>
-                            <h4>Gravity-based method</h4>
-                            <p>Gravity-based method of accessibility calculation count and weight oppor- tunities with an attraction factor, and discounts it with the separation factor. The relative accessibility of zone i to j using the gravity method can then be characterized by:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for6.png" alt="Formula of the relative accessibility of zone i to j using the gravity metho" class="formula">
-                            <p>Where Oi,j is the number of opportunities in zone i and j respectively, and tij is the spatial separation between zone i and j.</p>
-                            <p>Here, Oi does not have a discount factor since it is directly in zone i. Oj is discounted by a reciprocals factor of the spatial separation (tij). This would mean that if the number of opportunities is larger in zone j, accessibility will be higher.</p>
-                            <p>The integral accessibility for zone i using the gravity method can be formulated as:</p>
-                            <!-- Source: (original work) Steven Zhou-->
-                            <img src="images/p1_for7.png" alt="Formula of the integral accessibility for zone i using the gravity method" class="formula">
-                            <p>Here, the relative accessibility to each zone is averaged.</p>
-                        </section>
-
-                        <section>
-                            <h4>Determining spatial separation</h4>
-                            <p>The spatial separation values used for calcula- tion of accessibility is determined by constructing a OD cost matrix.</p>
-                            <p>The transit network dataset, constructed from General Transit Feed Specification (GTFS) files, and road networks from OSM are used to construct a multi-layered transit and pedestrain network. Using network analysis methods, a OD cost matrix is then solved to find the transit time between each combination of centroids of LSOAs in London.</p>
-                        </section>
-
-                        <section>
-                            <h4>Determining opportunities</h4>
-                            <p>Another component for measuring accessibility is the number of opportunities, or the “attraction strength” of the destination.</p>
-                            <p>This study uses the commuting flow OD data from the census, providing the number of commuters that are commuting between each set ofLSOAs on a daily basis. From this data, the number of job opportinities in each LSOA can be estimated.</p>
-                        </section>
-
-                        <!-- Source: (original work) Steven Zhou-->
-                        <figure>
-                            <img src="images/p1_fig2-7.svg" alt="A flow chart showing the process of determining accessibility in this study" class="graph">
-                            <figcaption>Figure 2.7: Framwork for characterizing transit accessibility in this study</figcaption>
-                        </figure>
-
-                    </section>
-
-                </section>
-
-                <section>
-                    <h2 id="results">Results (Preliminary)</h2>
-
-                    <section>
-                        <h3>Spatial Analysis - Spatial Heterogeneity of Accessibility</h3>
-
-                        <section>
-                            <h4>Spatial Separation Characterization of Accessibility</h4>
-
-                            <p>Figure 3.1 shows the result of accessibility for each LSOA in London, calculated with the spatial separation method.</p>
 
                             <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-1.png" alt="Choropleth map of London showing the spatial separation accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig2-6_large">
+                                <img src="images/p1_fig2-6.png" alt="A chart showing the catergories of deprivation">
+                                <figcaption>Figure 2.6: Categories of deprivation used in IoD
+                                </figcaption>
+                            </figure>
+
+                            <figure class="modal_image hidden" id="p1_fig2-7_large">
+                                <img src="images/p1_fig2-7.svg" alt="A flow chart showing the process of determining accessibility in this study">
+                                <figcaption>Figure 2.7: Framwork for characterizing transit accessibility in this study</figcaption>
+                            </figure>
+
+                            <figure class="modal_image hidden" id="p1_fig3-1_large">
+                                <img src="images/p1_fig3-1.png" alt="Choropleth map of London showing the spatial separation accessibility of each LSOAs">
                                 <figcaption>Figure 3.1: Spatial separation accessibility result</figcaption>
                             </figure>
 
-                            <p>A analysis of global autocorrelation using Moran's I statistic returned a I value of 0.915541 , which yielded a z-score of 283.249050 with p&lt;0.001. The positive z-score indicates a positive spatial autocorrelation at the p=0.001 level. Further analysis using Getis-Ord General G returned a observed G value of 0.000215, yielding a z-score of 102.092016 with p&lt;0.001. This indicates that it is mainly the higher values which are clustred.</p>
-                            <p>Local autocorrelation results using Anselin Local Moran's I and Getis-Ord Gi* are shown in Figure 3.2 and 3.3.</p>
-
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-2.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on spatial separation accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig3-2_large">
+                                <img src="images/p1_fig3-2.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on spatial separation accessibility of each LSOAs">
                                 <figcaption>Figure 3.2: Local spatial autocorrelation analysis using Anselin Local Moran’s I for spatial separation accessibility</figcaption>
                             </figure>
 
                             <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-3.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for spatial separation accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig3-3_large">
+                                <img src="images/p1_fig3-3.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for spatial separation accessibility of each LSOAs">
                                 <figcaption>Figure 3.3: Local spatial autocorrelation analysis using Getis-Ord Gi* for spatial separation accessibility</figcaption>
                             </figure>
-                        </section>
-
-                        <section>
-                            <h4>Gravity-based Characterization of Accessibility</h4>
-                            <p>Figure 3.4 shows the result of accessibility for each LSOA in London, calculated with the gravity-based method.</p>
 
                             <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-4.png" alt="Choropleth map of London showing the gravity accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig3-4_large">
+                                <img src="images/p1_fig3-4.png" alt="Choropleth map of London showing the gravity accessibility of each LSOAs">
                                 <figcaption>Figure 3.4: Gravity-based accessibility result</figcaption>
                             </figure>
 
-                            <p>A analysis of global autocorrelation using Moran's I statistic returned a I value of 0.118189 , which yield- ed a z-score of 47.022867 with p&lt;0.001. The positive z-score indicates a positive spatial autocorrelation at the p=0.001 level. Further analysis using Getis-Ord General G returned a observed G value of 0.001390, yielding a z-score of 46.026131 with p&lt;0.001. This indicates that it is mainly the higher values which are clustred.</p>
-
-                            <p>Local autocorrelation results using Anselin Local Moran's I and Getis-Ord Gi* are shown in Figure 3.5 and 3.6.</p>
-
                             <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-5.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on gravity accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig3-5_large">
+                                <img src="images/p1_fig3-5.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on gravity accessibility of each LSOAs">
                                 <figcaption>Figure 3.5: Local spatial autocorrelation analysis using Anselin Local Moran's I for gravity-based accessibility</figcaption>
                             </figure>
 
                             <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-6.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for gravity accessibility of each LSOAs" class="graph">
+                            <figure class="modal_image hidden" id="p1_fig3-6_large">
+                                <img src="images/p1_fig3-6.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for gravity accessibility of each LSOAs">
                                 <figcaption>Figure 3.6: Local spatial autocorrelation analysis using Getis-Ord Gi* for gravity-based accessibility</figcaption>
                             </figure>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure class="modal_image hidden" id="p1_fig3-7_large">
+                                <img src="images/p1_fig3-7.png" alt="A scatterplot showing the overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London.">
+                                <figcaption>Figure 3.7: Overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London. Each blue point represent a LSOA and the black line represent the linear regression line using the Ordinary Least Squared (OLS) method.</figcaption>
+                            </figure>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure class="modal_image hidden" id="p1_fig3-10_large">
+                                <img src="images/p1_fig3-10.png" alt="A matrix of scatterplot showing the correlation between IMD and accessibility at different population density ranges">
+                                <figcaption>Figure 3.10: Correlation at different population density ranges.</figcaption>
+                            </figure>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure class="modal_image hidden" id="p1_fig3-11_large">
+                                <img src="images/p1_fig3-11.png" alt="A line graph showing the change of r-values with different population density ranges">
+                                <figcaption>Figure 3.11: r-values for the correlation</figcaption>
+                            </figure>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure class="modal_image hidden" id="p1_fig3-12_large">
+                                <img src="images/p1_fig3-12.png" alt="A matrix of 3D scatterplots whoeing the relationship between population density, IMD and gravity accessibility">
+                                <figcaption>Figure 3.12: Three-dimensional scatter plot of values of deprivation (overall and for each aspect of deprivation), gravity-based accessibility and population density for LSOAs in Greater London.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+
+                <div class="in_project_header">
+                    <hgroup class="h1_group">
+                        <h1>Transit Accessibility and Deprivation</h1>
+                        <p>Exploring Spatiotemporal Heterogeneity and Association</p>
+                    </hgroup>
+
+                    <dl>
+                        <dt>Author</dt>
+                        <dd>Zihao Zhou</dd>
+
+                        <dt>Date</dt>
+                        <dd>Ongoing</dd>
+                    </dl>
+
+                    <p><strong>Note: the content presented here are preliminary and are subject to change</strong>. This text is a shortened version of the actual research paper.</p>
+                </div>
+
+                <div class="in_project_main">
+                    <section>
+                        <h2 id="abstract">Abstract</h2>
+                        <p>Following the "transport's economization", public transportation was rapidly constructed and reconstructed to (at least aimed to) simultaneously achieve economic, social, and environmental goals. However, even with a massive volume of literature around accessibility, the actual relationship between public transport accessibility and socioeconomic status has hitherto received scant attention from scholars. This study thus addresses this gap using a GIS-based quantitative approach. Transit accessibility with varied characterization approaches (including gravity method, cumulative opportunities method and spatial separation method) was calculated from various sources (including transit network, timetable road network, POIs and other socioeconomic data), using ArcGIS network analyst. In the analysis stage, this project first explored the spatial heterogeneity of urban deprivation and public transport accessibility using methods such as Global Moran's I, Getis-Ord Gi*, and Anselin Local Moran's I. Spatial patterns and autocorrelation is identified. Then, this study carried out a correlational analysis to explore the spatiotemporal relationship between deprivation and accessibility. Lastly, the factors which contribute to this relationship were briefly discussed.</p>
+                    </section>
+
+                    <section>
+                        <h2 id="methodology">Methodology</h2>
+
+                        <section>
+                            <h3>Conceptual Framework</h3>
+                            <p>The transportation network data will be first pre-processed, followed by construction of a multilayered network dataset, combing a range of different modes including buses routes, underground and overground railway lines, light rail lines, and walking. After establishing the network dataset, an origin-destination (O-D) cost matrix will be produced.</p>
+                            <p>After producing the O-D cost matrix, this study will calculate the spatial integral public transit accessibility with both the spatial separation and gravity method.</p>
+                            <p>The data analysis of this study includes (1) spatial analysis of the heterogeneity and autocorrelation of urban depri- vation and transit accessibility (2) correlational analyses to evaluate the correlation between urban deprivation and transit accessibility.</p>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure>
+                                <img src="images/p1_fig2-1.png" alt="Graphical Representation of the Conceptual Framework of the project's methodology" class="graph">
+                                <figcaption>
+                                    <button class="modal_open" id="p1_fig2-1_button">
+                                        Enlarge
+                                    </button>
+
+                                    <p>Figure 2.1: Conceptual Framework</p>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section>
+                            <h3>Data Sources</h3>
+
+                            <section>
+                                <h4>Transportation Network Data</h4>
+                                <ul>
+                                    <li>Road network in polyline vector format from Open Street map (OSM)</li>
+                                    <li>Public Transit (PT) network and timetables in GTFS format from Traveline</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Socioeconomic Data</h4>
+                                <ul>
+                                    <li>Deprivation measure from UK Ministry of Housing, Communities and Local Gov.</li>
+                                    <li>Commuting flows OD data from the census bureau</li>
+                                </ul>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig2-4.jpg" alt="Map of London showing the commuting flows between LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig2-4_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 2.4: Commuting flows OD data</p>
+                                    </figcaption>
+                                </figure>
+                            </section>
+
+                        </section>
+
+                        <section>
+                            <h3>Analysis of Spatial Heterogenity</h3>
+                            <p>Global spatial autocorrelation will be accessed using the Global Moran's I and the Getic-Ord General G statistic. Local spatial autocorrelation will be assessed using An-selin Local Moran's I and Getis-Ord Gi* statistic.</p>
+
+                            <section>
+                                <h4>Global spatial autocorrelation analysis</h4>
+                                <p>Firstly, the precense of global spatial autocorrelation will be detercted using the Global Moran's I statistic. The Global Moran's I Statistic is defined as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for1.png" alt="Formula of The Global Moran's I Statistic" class="formula">
+                                <p>Where n is the total number of spatial units, wi,j(d) is the spatial weight between i and j, defined by a spatial weight matrix, a symmetric Boolean matrix. zi is the devi- ation of the attribute value of a feature i from the global mean of that attribute.</p>
+                                <p>If the z-score is positive, then a positive spatial autocor- relation is foundm, and vice versa.</p>
+                                <p>If a statistically significant global spatial autocorrelation is found, the Getis-Ord General G statistic can then be used to evaluate the characteristic of the autocorrelation, identifying whether it is the low or high values. Getis-Ord General G statistic is defined as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for2.png" alt="Formula of the Getis-Ord General G statistic" class="formula">
+                                <p>Where xi is the attribute value of a feature i.</p>
+                            </section>
+
+                            <section>
+                                <h4>Local spatial autocorrelation analysis</h4>
+                                <p>The Local Moran's I statistic, which was decomposed from the Global Moran's I statistic to the local level by Luc Anselin, can be used to identify hotspots and spatial outliers. The I statistic is defined as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for3.png" alt="Formula of the Local Moran's I statistic" class="formula">
+                                <p>Where Si2 is the sample variance.</p>
+                                <p>Here, a positive I indicates that the is part of a cluster, while negative I indicates that it is part of a outlier. The Getis-Ord Gi* statistic, which is also called Getis-Ord local G statistic, is defined as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for4.png" alt="Formula of the Getis-Ord Gi* statistic" class="formula">
+                                <p>The larger the positive G, the more intense the hotspot (high values are more clustered). If G is negative, then the smaller the score, the more intense the coldspot.</p>
+                            </section>
+
+                        </section>
+
+                        <section>
+                            <h3>Characterizing Deprivation</h3>
+                            <p>This study will measure depriva- tion using the English Indices of Deprivation (IoD), a set of indices developed by the UK Ministry of Housing, Communities and Local Government.</p>
+                            <p>The IoD includes not only economic deprivation, but includes a variety of different categories of deprivation (See Figure 2.6).</p>
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure>
+                                <img src="images/p1_fig2-6.png" alt="A chart showing the catergories of deprivation" class="graph">
+                                <figcaption>
+                                    <button class="modal_open" id="p1_fig2-6_button">
+                                        Enlarge
+                                    </button>
+
+                                    <p>Figure 2.6: Categories of deprivation used in IoD</p>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section>
+                            <h3>Characterizing Accessibility</h3>
+                            <p>This study thus uses a multi-model approach for measuring accessibility - calculates both spatial separation and gravity-based accessibility.</p>
+
+                            <section>
+                                <h4>Spatial separation method</h4>
+                                <p>The spatial separational accessibility for each Lower Super Output Areas (LSOAs) is defined as the average spatial separation to centroids of all other LSOAs. Thus, the spatial separational method accessibility in this study can be mathematically defined as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for5.png" alt="Formula of the spatial separational method accessibility" class="formula">
+                                <p>Where n is the number of LSOAs, Tij is the spatial separation from i to j.</p>
+                            </section>
+
+                            <section>
+                                <h4>Gravity-based method</h4>
+                                <p>Gravity-based method of accessibility calculation count and weight oppor- tunities with an attraction factor, and discounts it with the separation factor. The relative accessibility of zone i to j using the gravity method can then be characterized by:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for6.png" alt="Formula of the relative accessibility of zone i to j using the gravity metho" class="formula">
+                                <p>Where Oi,j is the number of opportunities in zone i and j respectively, and tij is the spatial separation between zone i and j.</p>
+                                <p>Here, Oi does not have a discount factor since it is directly in zone i. Oj is discounted by a reciprocals factor of the spatial separation (tij). This would mean that if the number of opportunities is larger in zone j, accessibility will be higher.</p>
+                                <p>The integral accessibility for zone i using the gravity method can be formulated as:</p>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <img src="images/p1_for7.png" alt="Formula of the integral accessibility for zone i using the gravity method" class="formula">
+                                <p>Here, the relative accessibility to each zone is averaged.</p>
+                            </section>
+
+                            <section>
+                                <h4>Determining spatial separation</h4>
+                                <p>The spatial separation values used for calcula- tion of accessibility is determined by constructing a OD cost matrix.</p>
+                                <p>The transit network dataset, constructed from General Transit Feed Specification (GTFS) files, and road networks from OSM are used to construct a multi-layered transit and pedestrain network. Using network analysis methods, a OD cost matrix is then solved to find the transit time between each combination of centroids of LSOAs in London.</p>
+                            </section>
+
+                            <section>
+                                <h4>Determining opportunities</h4>
+                                <p>Another component for measuring accessibility is the number of opportunities, or the “attraction strength” of the destination.</p>
+                                <p>This study uses the commuting flow OD data from the census, providing the number of commuters that are commuting between each set ofLSOAs on a daily basis. From this data, the number of job opportinities in each LSOA can be estimated.</p>
+                            </section>
+
+                            <!-- Source: (original work) Steven Zhou-->
+                            <figure>
+                                <img src="images/p1_fig2-7.svg" alt="A flow chart showing the process of determining accessibility in this study" class="graph">
+                                <figcaption>
+                                    <button class="modal_open" id="p1_fig2-7_button">
+                                        Enlarge
+                                    </button>
+
+                                    <p>Figure 2.7: Framwork for characterizing transit accessibility in this study</p>
+                                </figcaption>
+                            </figure>
+
                         </section>
 
                     </section>
 
                     <section>
-                        <h3>Correlation Analysis - Accessibility and Deprivation</h3>
+                        <h2 id="results">Results (Preliminary)</h2>
 
                         <section>
-                            <h4>Overall Correlation</h4>
-                            <p>A correlation analysis was conducted to explore the relation- ship between deprivation and accessibility.</p>
-                            <p>Figure 3.7 shows the overall correlation between IMD and gravi- ty-based accessibility values. It can be observed that the two variables displays a weak posiitve correlation.</p>
+                            <h3>Spatial Analysis - Spatial Heterogeneity of Accessibility</h3>
 
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-7.png" alt="A scatterplot showing the overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London." class="graph">
-                                <figcaption>Figure 3.7: Overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London. Each blue point represent a LSOA and the black line represent the linear regression line using the Ordinary Least Squared (OLS) method.</figcaption>
-                            </figure>
+                            <section>
+                                <h4>Spatial Separation Characterization of Accessibility</h4>
 
-                            <p>The Pearson's Product Moment Correlation Coefficient (PPMCC), r, is 0.056580 for the two variables, where p&lt;0.001 (p=8.572506e-05). This indicates that a statistically significant positive correlation exists between accessibility and overall deprivation at p=0.001 level.</p>
+                                <p>Figure 3.1 shows the result of accessibility for each LSOA in London, calculated with the spatial separation method.</p>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-1.png" alt="Choropleth map of London showing the spatial separation accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-1_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.1: Spatial separation accessibility result</p>
+                                    </figcaption>
+                                </figure>
+
+                                <p>A analysis of global autocorrelation using Moran's I statistic returned a I value of 0.915541 , which yielded a z-score of 283.249050 with p&lt;0.001. The positive z-score indicates a positive spatial autocorrelation at the p=0.001 level. Further analysis using Getis-Ord General G returned a observed G value of 0.000215, yielding a z-score of 102.092016 with p&lt;0.001. This indicates that it is mainly the higher values which are clustred.</p>
+                                <p>Local autocorrelation results using Anselin Local Moran's I and Getis-Ord Gi* are shown in Figure 3.2 and 3.3.</p>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-2.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on spatial separation accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-2_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.2: Local spatial autocorrelation analysis using Anselin Local Moran’s I for spatial separation accessibility</p>
+                                    </figcaption>
+                                </figure>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-3.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for spatial separation accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-3_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.3: Local spatial autocorrelation analysis using Getis-Ord Gi* for spatial separation accessibility</p>
+                                    </figcaption>
+                                </figure>
+                            </section>
+
+                            <section>
+                                <h4>Gravity-based Characterization of Accessibility</h4>
+                                <p>Figure 3.4 shows the result of accessibility for each LSOA in London, calculated with the gravity-based method.</p>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-4.png" alt="Choropleth map of London showing the gravity accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-4_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.4: Gravity-based accessibility result</p>
+
+                                    </figcaption>
+                                </figure>
+
+                                <p>A analysis of global autocorrelation using Moran's I statistic returned a I value of 0.118189 , which yield- ed a z-score of 47.022867 with p&lt;0.001. The positive z-score indicates a positive spatial autocorrelation at the p=0.001 level. Further analysis using Getis-Ord General G returned a observed G value of 0.001390, yielding a z-score of 46.026131 with p&lt;0.001. This indicates that it is mainly the higher values which are clustred.</p>
+
+                                <p>Local autocorrelation results using Anselin Local Moran's I and Getis-Ord Gi* are shown in Figure 3.5 and 3.6.</p>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-5.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Anselin Local Moran's I on gravity accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-5_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.5: Local spatial autocorrelation analysis using Anselin Local Moran's I for gravity-based accessibility</p>
+                                    </figcaption>
+                                </figure>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-6.png" alt="Choropleth map of London showing the local spatial autocorrelation analysis result using Getis-Ord Gi* for gravity accessibility of each LSOAs" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-6_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.6: Local spatial autocorrelation analysis using Getis-Ord Gi* for gravity-based accessibility</p>
+
+                                    </figcaption>
+                                </figure>
+                            </section>
+
                         </section>
 
                         <section>
-                            <h4>Correlation of accessibility with different types of deprivation</h4>
-                            <p>The correlation direction and strength strength is differ- ent for different aspects of deprivation.</p>
-                            <p>Figure 3.8 graphs the correlation between gravity-based accessibiltiy and each type of deprivation. The r-values (for PPMCC) and the according p-values for the correlation between each type of deprivation and accessibility is calculated and summarized in Table 3.1. Asteroids indicates a statistically significant r (* at p=0.10 level, ** p=0.05, *** p=0.01, **** p=0.001)</p>
+                            <h3>Correlation Analysis - Accessibility and Deprivation</h3>
 
-                            <table>
-                                <caption>Table 3.1: Direction, r-values, and p-values for the correla- tion between accessibility and different aspects of deprivation</caption>
-                                <thead>
-                                    <tr>
-                                        <th>Type of deprivation</th>
-                                        <th>Correlation direction</th>
-                                        <th>Pearson's Correlation  Coefficient (r)</th>
-                                        <th>p-value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Income</td>
-                                        <td>Negative</td>
-                                        <td>-0.000010</td>
-                                        <td>9.994623e<sup>-01</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Employment</td>
-                                        <td>Negative</td>
-                                        <td>-0.023944*</td>
-                                        <td>9.669161e<sup>-02</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Education</td>
-                                        <td>Negative</td>
-                                        <td>-0.136838****</td>
-                                        <td>1.475058e<sup>-21</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Health</td>
-                                        <td>Positive</td>
-                                        <td>0.029316**</td>
-                                        <td>4.195778e<sup>-02</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Crime</td>
-                                        <td>Positive</td>
-                                        <td>0.114724****</td>
-                                        <td>1.414367e<sup>-15</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Barriers</td>
-                                        <td>Positive</td>
-                                        <td>0.016861</td>
-                                        <td>2.421408e<sup>-01</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Environment</td>
-                                        <td>Positive</td>
-                                        <td>0.367655****</td>
-                                        <td>5.620738e<sup>-154</sup></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <section>
+                                <h4>Overall Correlation</h4>
+                                <p>A correlation analysis was conducted to explore the relation- ship between deprivation and accessibility.</p>
+                                <p>Figure 3.7 shows the overall correlation between IMD and gravi- ty-based accessibility values. It can be observed that the two variables displays a weak posiitve correlation.</p>
 
-                            <p>It was shown that accessibility is positively correlated with Health deprivation & disabilty (r=0.029316), crime (r=0.114724), barriers to housing & sevrices (r=0.016861) and living environment deprivation (r=0.367655). It is negatively correlated with income deprivation (r=-0.000010), employment deprivation (r=-0.023944), and education, skills & training deprivation (r=-0.136838). The result is significant for employment (at p=0.10 level), eduation (at p=0.001), health (at p=0.05), crime (at p=0.001) and environment (at p=0.001).</p>
-                        </section>
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-7.png" alt="A scatterplot showing the overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London." class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-7_button">
+                                            Enlarge
+                                        </button>
 
-                        <section>
-                            <h4>Correlation at different population densities</h4>
-                            <p>It was also found that the direction and strength of correlation changes according to the population density.</p>
-                            <p>The correlation between accessibility and deprivation changes from positive to negative as population density interval increases. In terms of PPMCC, r=0.335460 when population density interval is [0,1000) persons per square km. r decreases to -0.247983 when population density interval is [8000,9000).</p>
+                                        <p>Figure 3.7: Overall correlation beween the Index of Multiple Deprivation (IMD) and the gravity-based accessibility values for LSOAs in Greater London. Each blue point represent a LSOA and the black line represent the linear regression line using the Ordinary Least Squared (OLS) method.</p>
 
-                            <table>
-                                <caption>Table 3.2: Direction, r-values, and p-values for the correla- tion at different population density ranges</caption>
-                                <thead>
-                                    <tr>
-                                        <th>Population density interval (people per square km)</th>
-                                        <th>Correlation direction</th>
-                                        <th>Pearson's Correlation   Coefficient (r)</th>
-                                        <th>p-value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>0-1000</td>
-                                        <td>Positive</td>
-                                        <td>0.335460****</td>
-                                        <td>2.186108e<sup>-10</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1000-2000</td>
-                                        <td>Positive</td>
-                                        <td>0.234141****</td>
-                                        <td>6.923834e<sup>-11</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2000-3000</td>
-                                        <td>Positive</td>
-                                        <td>0.123825****</td>
-                                        <td>1.034451e<sup>-04</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3000-4000</td>
-                                        <td>Negative</td>
-                                        <td>-0.009638</td>
-                                        <td>7.886556e<sup>-01</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4000-5000</td>
-                                        <td>Negative</td>
-                                        <td>-0.023909</td>
-                                        <td>5.575607e<sup>-01</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5000-6000</td>
-                                        <td>Negative</td>
-                                        <td>-0.086580*</td>
-                                        <td>6.500895e<sup>-02</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6000-7000</td>
-                                        <td>Negative</td>
-                                        <td>-0.170307***</td>
-                                        <td>1.966473e<sup>-03</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>7000-8000</td>
-                                        <td>Negative</td>
-                                        <td>-0.160363**</td>
-                                        <td>1.249210e<sup>-02</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>8000-9000</td>
-                                        <td>Negative</td>
-                                        <td>-0.247983***</td>
-                                        <td>2.067519e<sup>-03</sup></td>
-                                    </tr>
-                                    <tr>
-                                        <td>9000-Max</td>
-                                        <td>Negative</td>
-                                        <td>-0.219683***</td>
-                                        <td>2.884823e<sup>-03</sup></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    </figcaption>
+                                </figure>
 
-                            <p>This would imply that with higher urban characteristics, the spatial match of high accessibility and lower deprivation (more affluent). See Fig. 3.10 and 3.11 for the change of correlation direction with population density.</p>
+                                <p>The Pearson's Product Moment Correlation Coefficient (PPMCC), r, is 0.056580 for the two variables, where p&lt;0.001 (p=8.572506e-05). This indicates that a statistically significant positive correlation exists between accessibility and overall deprivation at p=0.001 level.</p>
+                            </section>
 
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-10.png" alt="A matrix of scatterplot showing the correlation between IMD and accessibility at different population density ranges" class="graph">
-                                <figcaption>Figure 3.10: Correlation at different population density ranges.</figcaption>
-                            </figure>
+                            <section>
+                                <h4>Correlation of accessibility with different types of deprivation</h4>
+                                <p>The correlation direction and strength strength is differ- ent for different aspects of deprivation.</p>
+                                <p>Figure 3.8 graphs the correlation between gravity-based accessibiltiy and each type of deprivation. The r-values (for PPMCC) and the according p-values for the correlation between each type of deprivation and accessibility is calculated and summarized in Table 3.1. Asteroids indicates a statistically significant r (* at p=0.10 level, ** p=0.05, *** p=0.01, **** p=0.001)</p>
 
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-11.png" alt="A line graph showing the change of r-values with different population density ranges" class="graph">
-                                <figcaption>Figure 3.11: r-values for the correlation</figcaption>
-                            </figure>
+                                <table>
+                                    <caption>Table 3.1: Direction, r-values, and p-values for the correla- tion between accessibility and different aspects of deprivation</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Type of deprivation</th>
+                                            <th>Correlation direction</th>
+                                            <th>Pearson's Correlation  Coefficient (r)</th>
+                                            <th>p-value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Income</td>
+                                            <td>Negative</td>
+                                            <td>-0.000010</td>
+                                            <td>9.994623e<sup>-01</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Employment</td>
+                                            <td>Negative</td>
+                                            <td>-0.023944*</td>
+                                            <td>9.669161e<sup>-02</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Education</td>
+                                            <td>Negative</td>
+                                            <td>-0.136838****</td>
+                                            <td>1.475058e<sup>-21</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Health</td>
+                                            <td>Positive</td>
+                                            <td>0.029316**</td>
+                                            <td>4.195778e<sup>-02</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Crime</td>
+                                            <td>Positive</td>
+                                            <td>0.114724****</td>
+                                            <td>1.414367e<sup>-15</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Barriers</td>
+                                            <td>Positive</td>
+                                            <td>0.016861</td>
+                                            <td>2.421408e<sup>-01</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Environment</td>
+                                            <td>Positive</td>
+                                            <td>0.367655****</td>
+                                            <td>5.620738e<sup>-154</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                            <!-- Source: (original work) Steven Zhou-->
-                            <figure>
-                                <img src="images/p1_fig3-12.png" alt="A matrix of 3D scatterplots whoeing the relationship between population density, IMD and gravity accessibility" class="graph">
-                                <figcaption>Figure 3.12: Three-dimensional scatter plot of values of deprivation (overall and for each aspect of deprivation), gravity-based accessibility and population density for LSOAs in Greater London.</figcaption>
-                            </figure>
+                                <p>It was shown that accessibility is positively correlated with Health deprivation & disabilty (r=0.029316), crime (r=0.114724), barriers to housing & sevrices (r=0.016861) and living environment deprivation (r=0.367655). It is negatively correlated with income deprivation (r=-0.000010), employment deprivation (r=-0.023944), and education, skills & training deprivation (r=-0.136838). The result is significant for employment (at p=0.10 level), eduation (at p=0.001), health (at p=0.05), crime (at p=0.001) and environment (at p=0.001).</p>
+                            </section>
+
+                            <section>
+                                <h4>Correlation at different population densities</h4>
+                                <p>It was also found that the direction and strength of correlation changes according to the population density.</p>
+                                <p>The correlation between accessibility and deprivation changes from positive to negative as population density interval increases. In terms of PPMCC, r=0.335460 when population density interval is [0,1000) persons per square km. r decreases to -0.247983 when population density interval is [8000,9000).</p>
+
+                                <table>
+                                    <caption>Table 3.2: Direction, r-values, and p-values for the correla- tion at different population density ranges</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Population density interval (people per square km)</th>
+                                            <th>Correlation direction</th>
+                                            <th>Pearson's Correlation   Coefficient (r)</th>
+                                            <th>p-value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0-1000</td>
+                                            <td>Positive</td>
+                                            <td>0.335460****</td>
+                                            <td>2.186108e<sup>-10</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1000-2000</td>
+                                            <td>Positive</td>
+                                            <td>0.234141****</td>
+                                            <td>6.923834e<sup>-11</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000-3000</td>
+                                            <td>Positive</td>
+                                            <td>0.123825****</td>
+                                            <td>1.034451e<sup>-04</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3000-4000</td>
+                                            <td>Negative</td>
+                                            <td>-0.009638</td>
+                                            <td>7.886556e<sup>-01</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4000-5000</td>
+                                            <td>Negative</td>
+                                            <td>-0.023909</td>
+                                            <td>5.575607e<sup>-01</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5000-6000</td>
+                                            <td>Negative</td>
+                                            <td>-0.086580*</td>
+                                            <td>6.500895e<sup>-02</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6000-7000</td>
+                                            <td>Negative</td>
+                                            <td>-0.170307***</td>
+                                            <td>1.966473e<sup>-03</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7000-8000</td>
+                                            <td>Negative</td>
+                                            <td>-0.160363**</td>
+                                            <td>1.249210e<sup>-02</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8000-9000</td>
+                                            <td>Negative</td>
+                                            <td>-0.247983***</td>
+                                            <td>2.067519e<sup>-03</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9000-Max</td>
+                                            <td>Negative</td>
+                                            <td>-0.219683***</td>
+                                            <td>2.884823e<sup>-03</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p>This would imply that with higher urban characteristics, the spatial match of high accessibility and lower deprivation (more affluent). See Fig. 3.10 and 3.11 for the change of correlation direction with population density.</p>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-10.png" alt="A matrix of scatterplot showing the correlation between IMD and accessibility at different population density ranges" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-10_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.10: Correlation at different population density ranges.</p>
+                                    </figcaption>
+                                </figure>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-11.png" alt="A line graph showing the change of r-values with different population density ranges" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-11_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.11: r-values for the correlation</p>
+
+                                    </figcaption>
+                                </figure>
+
+                                <!-- Source: (original work) Steven Zhou-->
+                                <figure>
+                                    <img src="images/p1_fig3-12.png" alt="A matrix of 3D scatterplots whoeing the relationship between population density, IMD and gravity accessibility" class="graph">
+                                    <figcaption>
+                                        <button class="modal_open" id="p1_fig3-12_button">
+                                            Enlarge
+                                        </button>
+
+                                        <p>Figure 3.12: Three-dimensional scatter plot of values of deprivation (overall and for each aspect of deprivation), gravity-based accessibility and population density for LSOAs in Greater London.</p>
+                                    </figcaption>
+                                </figure>
+
+                            </section>
 
                         </section>
 
                     </section>
-
-                </section>
-            </div>
-        </main>
+                </div>
+            </main>
+        </div>
     </div>
 
     <footer>
@@ -487,6 +674,7 @@
 
     <script src="scripts/jquery-3.6.1.js"></script>
     <script src="scripts/main_dropdown.js"></script>
+    <script src="scripts/projects_img_modal.js"></script>
 </body>
 
 </html>
