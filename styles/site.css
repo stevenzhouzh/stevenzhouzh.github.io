@@ -128,7 +128,7 @@ th, td {
 
 .overall_header nav > ul li > ul {
     position: absolute;
-    top: 2em;
+    top: 2.3em;
     left: 50%;
     width: 10em;
     transform: translateX(-50%);
@@ -139,6 +139,7 @@ th, td {
     gap: 0.2em;
     padding: 1em 0;
     z-index: 2 !important;
+    border: #FFFFFF solid 0.1em
 }
 
 .overall_header nav > ul li > ul li {
@@ -398,12 +399,15 @@ footer a {
 .accordian_button:hover {
     background-color: #838383;
     color: #fbfbfb;
-    border-top: #000000 solid 0.1em;
 }
 
 .accordian_item {
     margin: 0;
     padding: 0;
+}
+
+.accordian_item h3 {
+    margin: 0;
 }
 
 .dropdown_arrow, .dropdown_arrow_expanded {
@@ -470,4 +474,12 @@ footer a {
 
 .modal_open {
     margin: 0 auto;
+}
+
+.nav_dropdown_arrow {
+    display: inline-block;
+    border-left: #ffffff solid 3px;
+    border-bottom: #ffffff solid 3px;
+    padding: 4px;
+    transform: rotate(-45deg);
 }
