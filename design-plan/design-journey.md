@@ -361,8 +361,11 @@ My interactivity meets the "ambitious" requirement as it contains 3 distinctive 
 > Explain how your design effectively uses affordances, visibility, feedback, and familiarity.
 > Write a large paragraph (4-6 sentences)
 
-TODO: interactivity rationale
+The dropdown menu at the top navigation bar is in affordance with affodances and visibility principles of design. The small white down arrow is an visally apparent indicator that something can be expanded if it is hovered on. The design also gives feedback when user hovers, with the dropdown appearing and the background color turning lighter. If the user hovers on any of the navigation item links, the link text will be underlined with a lightened color. This design is seen in many modern wedsites and thus satisfies the familiarity principle.
 
+The accordian uses the affordance principle with each item of the accordian having a small arrow beside it, and with a button like symbology. Along with this, each item is separated with a line to increase visibility of action. The design also gives visually apparent feedback: each item lightens when hovered. When clicked, the item space expands and content appears. THe little arrow also changes its direction to show that it is expanded. This design, especially with the flipping arrow, is a very common deisgn pattern.
+
+The modal can be triggered with a "Enlarge" button right below the corresponding image, which act as a actionable item that follows the affordances principle. When clicked, the entire main content has a darkened background and a "window" like box appears with the enlarged image. This is a visually striaghtfoward feedback on action. Once opened, the "close" button at the top right corner the box clearly indicate that it can be clicked to collapse the modal. This design is very commonly applied to many websites we seen today, especially on academic article sites and personal blogs.
 
 ### Tell Us What to Grade (Final Submission)
 > We aren't re-grading your Project 1 or 2.
@@ -370,28 +373,40 @@ TODO: interactivity rationale
 > Tell us where (what pages) we can find your interactivity and how to use it.
 > **We will only grade what you list here;** if it's not listed, we won't grade it.
 
-TODO: what should we grade
+- Dropdown menu at the top navigation bar (for the items "Project" and "Experiences)
+
+![Location of the dropdown menu feature](dropdown_location.png)
+
+- Accordian in "Work Experience" section of "Experiences" page (experience.html#work)
+  - Navigate by: Home --> Top Nav bar --> Hover on "Experiences" --> Click "Work" on dropdown and the accordian will be just below the "Work Experience" title
+
+![Location of the accordian feature](accordian_location.png)
+
+- Modal in Transit Accessibility and Deprivation Project page (project1.html)
+  - Navigate by: Home --> Top Nav bar --> Click on "Projects" --> Click on the "Read More" button at the bottom of the first box on the page titled "Transit Accessibility and Deprivation" --> Scroll down to "Conceptual Framework" part under "Methodology" and you will find a "Enlarge" button right below Figure 2.1 (Note that this is only one example, all the graph/map have this feature in this page). Click on the button to activate the modal.
+
+![Location of the modal feature](modal_location.png)
 
 
 ### Collaborators (Final Submission)
 > List any persons you collaborated with on this project.
 
-TODO: list your collaborators
+I completed this project on my own.
 
 
 ### Reference Resources (Final Submission)
 > Please cite any external resources you referenced in the creation of your project.
 > (i.e. W3Schools, StackOverflow, Mozilla, etc.)
 
-TODO: list reference resources
+I used Mozilla Web Docs during the implementation stage (HTML, CSS and JS) of this project.
 
 
 ### Self-Reflection (Final Submission)
 > This was the first project in this class where you coded some JavaScript. What did you learn from this experience?
 
-TODO: self-reflection
+I learn the basics of adding client side interactivity to websites. Altough I did have some experience in web, I did not get to interactivity yet so this was exciting. Furthermore, I have leanrt the principles of designing website interactivity and the systematic steps of designing and then implementation.
 
 
 > Take some time here to reflect on how much you've learned since you started this class. It's often easy to ignore our own progress. Take a moment and think about your accomplishments in this class. Hopefully you'll recognize that you've accomplished a lot and that you should be very proud of those accomplishments!
 
-TODO: self-reflection
+I have now learnt how to design a website from scratch: gathering user data, identifying audience and their goals, designing information archetecture and then the layout. I have then learned how to implement the website with HTML and CSS. Now i am very excited about being introduced to the field of interactivity wIhich is a whole new experience for me!
