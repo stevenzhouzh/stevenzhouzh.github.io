@@ -404,9 +404,9 @@ I used Mozilla Web Docs during the implementation stage (HTML, CSS and JS) of th
 ### Self-Reflection (Final Submission)
 > This was the first project in this class where you coded some JavaScript. What did you learn from this experience?
 
-I learn the basics of adding client side interactivity to websites. Altough I did have some experience in web, I did not get to interactivity yet so this was exciting. Furthermore, I have leanrt the principles of designing website interactivity and the systematic steps of designing and then implementation.
+In the process of learning the basics of adding client-side interactivity to websites, I was able to expand my skills in web development. Even though I had some experience with web development, I had not yet explored the fascinating world of interactivity. This was a thrilling experience as I learn the essentials of creating interactive designs.
 
 
 > Take some time here to reflect on how much you've learned since you started this class. It's often easy to ignore our own progress. Take a moment and think about your accomplishments in this class. Hopefully you'll recognize that you've accomplished a lot and that you should be very proud of those accomplishments!
 
-I have now learnt how to design a website from scratch: gathering user data, identifying audience and their goals, designing information archetecture and then the layout. I have then learned how to implement the website with HTML and CSS. Now i am very excited about being introduced to the field of interactivity wIhich is a whole new experience for me!
+As I reflect on my journey of learning web development, I feel proud of my achievements so far. I gained a solid understanding of the fundamentals of designing a website from scratch. I have learned the importance of gathering user data, identifying the target audience and their goals, and designing a clear information architecture and layout. It has been a fascinating learning experience to discover how to implement these design principles using HTML and CSS. Now I am thrilled to be introduced to the exciting field of interactivity. This presents a whole new dimension of web design that I have yet to explore.
